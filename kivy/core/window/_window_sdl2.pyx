@@ -17,8 +17,12 @@ cdef class _WindowSDL2Storage:
         raise RuntimeError(<bytes> SDL_GetError())
 
     def setup_window(self, x, y, width, height, borderless, fullscreen,
-                     shaped=False):
+                     shaped=False, minimized=True, maximized=False):
         self.win_flags = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE
+        if minimized:
+            self.win_flags |= SDL_WINDOW_MINIMIZED
+        elif maximized:
+            self.win_flags |= SDL_WINDOW_MAXIMIZED
         if borderless or shaped:
             self.win_flags |= SDL_WINDOW_BORDERLESS
         if fullscreen == 'auto':
