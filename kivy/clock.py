@@ -456,7 +456,7 @@ class ClockBase(_ClockBase):
             fps = self._max_fps
             usleep = self.usleep
 
-            sleeptime = 1 / fps - (self() - self._last_tick)
+            sleeptime = 1 / fps - (self.time() - self._last_tick)
             while sleeptime - sleep_undershoot > min_sleep:
                 usleep(1000000 * (sleeptime - sleep_undershoot))
                 sleeptime = 1 / fps - (self.time() - self._last_tick)
