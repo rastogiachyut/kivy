@@ -191,8 +191,13 @@ kivy_options = {
     'camera': ('opencv', 'gi', 'pygst', 'videocapture', 'avfoundation'),
     'spelling': ('enchant', 'osxappkit', ),
     'clipboard': (
+<<<<<<< HEAD
         'android', 'winctypes', 'xsel', 'dbusklipper', 'nspaste', 'sdl2', 'pygame',
         'dummy'), }
+=======
+        'android', 'winctypes', 'xsel', 'dbusklipper', 'nspaste', 'sdl2',
+        'pygame', 'dummy')}
+>>>>>>> ea615a4f60ffcd49e5580438532355c296061ed6
 
 # Read environment
 for option in kivy_options:

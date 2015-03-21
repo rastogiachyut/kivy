@@ -93,7 +93,11 @@ class ButtonBehavior(object):
     '''This determines if the widget fires a `on_release` event if
     the touch_up is outside the widget.
 
+<<<<<<< HEAD
     ..versionadded:: 1.9.0  
+=======
+    ..versionadded:: 1.9.0
+>>>>>>> ea615a4f60ffcd49e5580438532355c296061ed6
 
     :attr:`always_release` is a :class:`~kivy.properties.BooleanProperty`,
     defaults to `True`.
@@ -148,9 +152,15 @@ class ButtonBehavior(object):
         assert(self in touch.ud)
         touch.ungrab(self)
         self.last_touch = touch
+<<<<<<< HEAD
         
         if (not self.always_release
              and not self.collide_point(*touch.pos)):
+=======
+
+        if (not self.always_release
+                and not self.collide_point(*touch.pos)):
+>>>>>>> ea615a4f60ffcd49e5580438532355c296061ed6
             self.state = 'normal'
             return
 
