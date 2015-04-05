@@ -28,7 +28,7 @@ __all__ = (
     'kivy_config_fn', 'kivy_usermodules_dir',
 )
 
-__version__ = '1.9.0-dev'
+__version__ = '1.9.1-dev'
 
 import sys
 import shutil
@@ -186,13 +186,15 @@ kivy_options = {
     'video': (
         'gstplayer', 'ffmpeg', 'ffpyplayer', 'gi', 'pygst', 'pyglet',
         'null'),
-    'audio': ('gstplayer', 'pygame', 'gi', 'pygst', 'ffpyplayer', 'sdl2'),
+    'audio': (
+        'gstplayer', 'pygame', 'gi', 'pygst', 'ffpyplayer', 'sdl2',
+        'avplayer'),
     'image': ('tex', 'imageio', 'dds', 'gif', 'sdl2', 'pygame', 'pil', 'ffpy'),
     'camera': ('opencv', 'gi', 'pygst', 'videocapture', 'avfoundation'),
     'spelling': ('enchant', 'osxappkit', ),
     'clipboard': (
         'android', 'winctypes', 'xsel', 'dbusklipper', 'nspaste', 'sdl2',
-        'pygame', 'dummy')}
+        'pygame', 'dummy', 'gtk3', )}
 
 # Read environment
 for option in kivy_options:
